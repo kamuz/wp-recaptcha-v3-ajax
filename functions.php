@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Define reCAPTCHA keys as constants for easier reuse.
-define( 'RECAPTCHA_SITE_KEY', '6Lex41QrAAAAALEYoruQWzw3NPw3NjuFgTfYqzKm' );
-define( 'RECAPTCHA_SECRET_KEY', '6Lex41QrAAAAAJgAEnHedWa0a4HQ_EhT6cfv0OO4' );
+define( 'RECAPTCHA_SITE_KEY', 'your_site_key_here' );
+define( 'RECAPTCHA_SECRET_KEY', 'your_secret_key_here' );
 
 /**
  * Enqueue parent theme stylesheet.
