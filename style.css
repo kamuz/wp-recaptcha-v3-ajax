@@ -1,0 +1,61 @@
+/*
+Theme Name: Generate
+Template: generatepress
+*/
+
+.grecaptcha-badge {
+	visibility: hidden;
+}
+
+.simple-contact-form .form-response {
+	display: none;
+	padding: 15px;
+	border-radius: 4px;
+	margin: 20px 0;
+}
+
+.simple-contact-form .form-response.success {
+	background-color: #d4edda;
+	border: 1px solid #c3e6cb;
+	color: #155724;
+}
+
+.simple-contact-form .form-response.error {
+	background-color: #f8d7da;
+	border: 1px solid #f5c6cb;
+	color: #721c24;
+}
+
+.simple-contact-form .form-group {
+	margin-bottom: 20px;
+}
+
+.simple-contact-form label {
+	font-weight: bold;
+	display: block;
+	margin-bottom: 5px;
+}
+
+.simple-contact-form input[type="text"],
+.simple-contact-form input[type="email"],
+.simple-contact-form textarea {
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.simple-contact-form button[type="submit"] {
+	background-color: #0073aa;
+	color: white;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.simple-contact-form p.recaptcha-info {
+	font-size: 12px;
+	color: #777;
+}
