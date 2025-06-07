@@ -119,6 +119,7 @@ function handle_ajax_contact_form() {
 		)
 	);
 
+	// Check if the HTTP request to the Google reCAPTCHA verification endpoint failed.
 	if ( is_wp_error( $verify ) ) {
 		// Log error when HTTP request to reCAPTCHA fails.
 		error_log( 'reCAPTCHA request failed: ' . $verify->get_error_message() );
@@ -139,6 +140,7 @@ function handle_ajax_contact_form() {
 		}
 	}
 
+	// Send response with errors.
 	if ( ! empty( $response['errors'] ) ) {
 		wp_send_json( $response );
 	}
@@ -149,12 +151,14 @@ function handle_ajax_contact_form() {
 	$body    = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 	$headers = array( 'Reply-To: ' . $email );
 
+	// Send email.
 	if ( wp_mail( $to, $subject, $body, $headers ) ) {
 		$response['success'] = true;
 	} else {
 		$response['errors'][] = 'Failed to send message. Please try again.';
 	}
 
+	// Send success response.
 	wp_send_json( $response );
 }
 add_action( 'wp_ajax_send_contact_form', 'handle_ajax_contact_form' );
